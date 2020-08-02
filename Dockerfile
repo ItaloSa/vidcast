@@ -1,3 +1,9 @@
 FROM python:3.8-slim
 
-CMD [ "pip", "install", "pydub" ]
+COPY requirements.txt .
+
+RUN apt update
+RUN apt install ffmpeg -y
+
+# install dependencies
+RUN pip3 install -r requirements.txt
