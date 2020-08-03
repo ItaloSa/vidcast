@@ -3,7 +3,9 @@ from flask import Flask, jsonify, request, send_file
 from controller import start_process, get_result_file
 import os
 
-server = Flask(__name__)
+app_port = os.getenv('PORT') or 5000
+
+server = Flask(__name__, port=)
 server.config['DEBUG'] = True
 
 if not os.path.isdir('temp'):
