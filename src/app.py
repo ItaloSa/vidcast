@@ -5,7 +5,7 @@ import os
 
 app_port = os.getenv('PORT') or 5000
 
-server = Flask(__name__, port=)
+server = Flask(__name__)
 server.config['DEBUG'] = True
 
 if not os.path.isdir('temp'):
@@ -36,4 +36,4 @@ def get_result(file_name):
 
 
 if __name__ == '__main__':
-    server.run()
+    server.run(port=app_port)
