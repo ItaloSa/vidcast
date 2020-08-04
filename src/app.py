@@ -36,4 +36,4 @@ def get_result(file_name):
 
 
 if __name__ == '__main__':
-    server.run(port=app_port)
+    server.run(host='0.0.0.0', port=app_port)
